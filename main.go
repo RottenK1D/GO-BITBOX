@@ -8,18 +8,23 @@ import (
 )
 
 func home(c echo.Context) error {
-	return c.String(http.StatusOK, "Home Page")
+	return c.String(http.StatusOK, "BITBOX")
 }
 
-func about(c echo.Context) error {
-	return c.String(http.StatusOK, "About Page")
+func bitView(c echo.Context) error {
+	return c.String(http.StatusOK, "Displaying bit")
+}
+
+func bitCreate(c echo.Context) error {
+	return c.String(http.StatusOK, "Creating bit")
 }
 
 func main() {
 	e := echo.New()
 
 	e.GET("/", home)
-	e.GET("/about", about)
+	e.GET("/bitbox/view", bitView)
+	e.GET("/bitbox/create", bitCreate)
 
 	e.Logger.Fatal(e.Start(":3000"))
 }
