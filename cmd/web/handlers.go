@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/RottenK1D/GO-BITBOX/ui/html/pages"
+	"github.com/RottenK1D/GO-BITBOX/internal/templates/pages"
 	"github.com/a-h/templ"
 )
 
