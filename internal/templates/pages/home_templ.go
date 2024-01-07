@@ -32,7 +32,7 @@ func Home() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</title></head><body><header><h1><a href=\"/\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</title><link href=\"./assets/tailwind.css\" rel=\"stylesheet\"></head><body><header><h1><a href=\"/\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -41,7 +41,7 @@ func Home() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></h1></header><h2 class=\"\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></h1></header><h2 class=\"bg-red-500\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

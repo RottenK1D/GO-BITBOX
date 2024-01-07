@@ -8,6 +8,10 @@ import (
 
 func main() {
 	mux := http.NewServeMux()
+
+	fs := http.FileServer(http.Dir("./internal/assets/"))
+
+	http.Handle("/assets/", http.StripPrefix("/assets/", fs))
 	mux.HandleFunc("/", home)
 	mux.HandleFunc("/bit/view", bitView)
 	mux.HandleFunc("/bit/create", bitCreate)
