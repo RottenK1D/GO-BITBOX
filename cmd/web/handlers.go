@@ -4,6 +4,9 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
+
+	"github.com/RottenK1D/GO-BITBOX/ui/html/pages"
+	"github.com/a-h/templ"
 )
 
 // Home is a simple HTTP handler function which writes a byte slice
@@ -13,7 +16,8 @@ func home(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.Write([]byte("Hello from BITBOX"))
+	component := pages.Home()
+	templ.Handler(component).ServeHTTP(w, r)
 }
 
 // BitView displays a specific bit based on ID provided in the URL
